@@ -13,7 +13,6 @@ class MachinesService {
         if (ProxyState.total >= foundSnack.price) {
             foundSnack.amount += 1
             ProxyState.total = (ProxyState.total - foundSnack.price)
-            console.log(foundSnack.amount)
         } else {
             alert("You don't have enough cash for that!")
         }
