@@ -19,7 +19,14 @@
         </nav>
     </header>
     <main class="container-fluid">
-        <button type="button" class="btn btn-primary" onclick="">Insert 25¢</button> <!-- Alt 0162 -->
+        <div class="py-2">
+            <button type="button" class="btn btn-primary" onclick="app.machinesController.insert()">Insert
+                25¢</button>
+            <!-- Alt 0162 -->
+            <h2 class="py-2">Total: $<span id="total">0</span></h2>
+            <button type="button" class="btn btn-warning" onclick="app.machinesController.return()">Return
+                Change</button>
+        </div>
     </main>
     <footer class="container-fluid bg-dark text-light">
         <div class="row text-center">
