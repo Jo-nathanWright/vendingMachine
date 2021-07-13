@@ -2,16 +2,10 @@ import Snack from "./Models/Snacks.js"
 import { EventEmitter } from "./Utils/EventEmitter.js"
 import { isValidProp } from "./Utils/isValidProp.js"
 
-let currentSnack = new Snack()
-
 class AppState extends EventEmitter {
   total = 0
   snacks = [new Snack("Chips", 1, 0), new Snack("Cookie", 1.5, 0), new Snack("Soda", 2, 0), new Snack("Poptart", 5, 0)] //use find to find the name
-  //ProxyState.snacks.find(s => s.name == (banana word))
-  snack = new Snack("Chips", 1, 0)
-  //snack = currentSnack
 }
-
 // NOTE Don't touch this
 export const ProxyState = new Proxy(new AppState(), {
   get(target, prop) {
